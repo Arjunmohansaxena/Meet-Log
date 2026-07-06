@@ -25,25 +25,30 @@ Meet-Log/
 ├── LICENSE
 ├── .gitignore
 └── README.md
+```
 ## Backend setup
 
 Open PowerShell and change into the backend folder:
-
+```
 cd E:\CSE\Meet-Log\backend
+```
 Activate the virtual environment:
-
+```
 .\.venv\Scripts\Activate.ps1
+```
 Install dependencies:
-
+```
 python -m pip install -r requirements.txt
+```
 Create a .env file in backend/ or set the environment variable directly.
-
+```
 Example .env content:
-
 GEMINI_API_KEY=your_api_key_here
+```
 Start the backend server:
-
+```
 python -m uvicorn main:app --reload --port 8000
+```
 ### Notes
 
 If uvicorn fails because the Windows executable wrapper is broken, use the python -m uvicorn form from the active virtual environment.
@@ -54,8 +59,9 @@ Open chrome://extensions in Chrome.
 Enable Developer mode.
 Click **Load unpacked** and select the extension/ folder.
 Open the popup and enter the backend upload URL:
-
+```
 http://127.0.0.1:8000/upload
+```
 Start recording and stop when the meeting is finished.
 
 ## How it works
@@ -68,15 +74,19 @@ It then sends the transcript to the Google model and returns a JSON report plus 
 
 If VS Code cannot resolve imports, ensure the workspace uses backend/.venv as the Python interpreter.
 If pip install -r requirements.txt fails, run:
-
+```
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
 If uvicorn fails with a launcher error, run:
-
+```
 python -m uvicorn main:app --reload --port 8000
+```
 ## Security
 
 Do not commit backend/.env.
+
 Do not commit backend/uploads/.
+
 Keep API keys and other secrets out of source control.
 ## License
 
