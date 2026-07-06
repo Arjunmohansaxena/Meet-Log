@@ -1,0 +1,107 @@
+body {
+  width: 320px;
+  margin: 0;
+  padding: 16px;
+  font-family: Inter, Arial, sans-serif;
+  color: #111827;
+  background: #f5f7fb;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.status {
+  padding: 14px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #d2d6dc;
+  margin-bottom: 14px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.status strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.status-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #111827;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+button {
+  flex: 1;
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+button.primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 12px 20px rgba(37, 99, 235, 0.18);
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #111827;
+  background: #ffffff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.footer {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #6b7280;
+}

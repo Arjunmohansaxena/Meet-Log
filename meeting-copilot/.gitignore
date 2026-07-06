@@ -1,0 +1,20 @@
+# Backend
+/backend/.env
+/backend/uploads/
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Editor
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Meeting copilot",
+  "version": "0.1.0",
+  "description": "AI meeting decision-log copilot",
+  "permissions": ["tabCapture", "activeTab", "storage", "offscreen"],
+  "host_permissions": [
+    "https://meet.google.com/*",
+    "https://zoom.us/*",
+    "https://teams.microsoft.com/*",
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*", "https://zoom.us/*", "https://teams.microsoft.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

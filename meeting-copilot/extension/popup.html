@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meeting Copilot</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Meeting Copilot</h1>
+    <div class="status" id="statusBox">
+      <strong>Status</strong>
+      <div id="statusText" class="status-text">Ready</div>
+    </div>
+
+    <div class="row">
+      <button id="startBtn" class="primary">Start</button>
+      <button id="stopBtn" class="secondary" disabled>Stop</button>
+    </div>
+
+    <label for="backendUrl">Backend upload URL</label>
+    <input id="backendUrl" type="url" placeholder="http://127.0.0.1:8000/upload" />
+
+    <div class="footer">If the backend is running, recording will upload automatically.</div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
